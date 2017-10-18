@@ -5,13 +5,13 @@ var cors = require('cors')
 var app = express();
 var cloudinary = require('cloudinary');
 var port = process.env.PORT || 4300;
-var config = require('./config');
+//var config = require('./config');
 
 //Config Cloudinary
 cloudinary.config({ 
-    cloud_name: process.env.cloudName || config.config.cloud_name, 
-    api_key: process.env.cloudKey || config.config.api_key, 
-    api_secret: process.env.cloudSecret || config.config.api_secret
+    cloud_name: process.env.cloudName , 
+    api_key: process.env.cloudKey , 
+    api_secret: process.env.cloudSecret 
   });
 //Use
 app.use(bodyParser.json()); // support json encoded bodies
